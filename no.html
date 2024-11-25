@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NO</title>
+    <link rel="stylesheet" href="no.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="sparkle-container"></div>
+    </div>
+
+    <div class="center-content">
+      <img src="sorry.gif" alt="GIF Animation" class="center-gif">
+      <h1>Okay..</h1>
+    </div>
+
+    <!-- <script>
+      const sparkleContainer = document.getElementById('sparkle-container');
+
+      // Function to generate a heart
+      function createSparkle() {
+          const sparkle = document.createElement('div');
+          sparkle.classList.add('sparkle');
+
+          // Set random horizontal position
+          const randomX = Math.random() * window.innerWidth;
+          sparkle.style.left = `${randomX}px`;
+
+          // Add the heart (sparkle) to the container
+          sparkleContainer.appendChild(sparkle);
+
+          // Remove sparkle (heart) after animation ends
+          setTimeout(() => {
+              sparkle.remove();
+          }, 3000);
+      }
+
+      // Function to start the heart shower
+      function startShower(duration) {
+          const interval = setInterval(createSparkle, 50);
+
+          // Stop the shower after the given duration
+          setTimeout(() => {
+              clearInterval(interval);
+          }, duration * 1000);
+      }
+
+      // Start the heart shower for 10 seconds
+      startShower(1000);
+    </script> -->
+  </body>
+</html>
