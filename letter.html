@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Letter-Content</title>
+    <link rel="stylesheet" href="letter.css" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Dynamic text -->
+      <h1 id="display-text" class="fade-in-text">Hello Dipal..👋</h1>
+      
+      <!-- Next button -->
+      <div id="next-container">
+        <button id="next-button" class="fade-in-button">Next</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const lines = [
+          "....",
+          "See i know he thoda wired watel tula & obviously rag pn yeu shakto,😅",
+          "but he khup divsan pasun maza manat ahe",
+          "ani jar he goshta nahi sangitli tula tr life time regret karen me 🫣",
+          "Mi jevha tula first time bhetlo hoto tevha watla navta kadhi ashil feeling pn yeil but halu halu tuzashi gappa marna, bolna changla vatayla lagla.😊 See i really like you ani tuza jo pn decision asel i will respect it.",
+          "So.."
+        ];
+
+        const displayText = document.getElementById("display-text");
+        const nextButton = document.getElementById("next-button");
+
+        let currentIndex = 0;
+
+        // Handle the "Next" button click
+        nextButton.addEventListener("click", () => {
+          if (currentIndex < lines.length - 1) {
+            // Add fade-out animation
+            displayText.classList.remove("fade-in-text");
+            displayText.classList.add("fade-out-text");
+
+            // Wait for fade-out to complete, then update the text and fade in
+            setTimeout(() => {
+              currentIndex++;
+              displayText.textContent = lines[currentIndex];
+              displayText.classList.remove("fade-out-text");
+              displayText.classList.add("fade-in-text");
+
+              // If on the last line, change button text to "Finish"
+              if (currentIndex === lines.length - 1) {
+                nextButton.textContent = "Next";
+                
+              }
+            }, 1000); // Matches fade-out duration
+          } else {
+            // Redirect to a new page when "Finish" is clicked
+            window.location.href = "asking.html"; // Replace with your target URL
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
