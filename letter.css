@@ -1,0 +1,78 @@
+/* Body styles */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(letter-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#display-text{
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Container to center content */
+#container {
+  text-align: center;
+}
+
+/* Styling for text and button alignment */
+h1, #next-button {
+  margin: 10px 0;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade-out animation */
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Apply fade-in animation to the text */
+.fade-in-text {
+  animation: fade-in 1s forwards;
+  opacity: 0;
+}
+
+/* Apply fade-out animation to the text */
+.fade-out-text {
+  animation: fade-out 1s forwards;
+  opacity: 1;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  font-size: 20px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
