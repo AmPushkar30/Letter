@@ -1,0 +1,48 @@
+body {
+  background: linen;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+img {
+  margin-left: 40%;
+  margin-top: 1%;
+  height: 300px;
+  width: 300px;
+  mix-blend-mode: color-burn;
+}
+
+.header {
+  text-align: center;
+  margin-top: 110px;
+}
+
+#preloader {
+  background: #ffffff url(loader.gif) no-repeat center center;
+  background-size: 500px;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+/* Responsive text size */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5em;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.2em;
+  }
+  .responsive-img {
+    max-width: 100%;
+    margin: 15px auto;
+    padding-left: 40px;
+  }
+}
