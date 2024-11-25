@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asking</title>
+    <link rel="stylesheet" href="asking.css">
+</head>
+<body>
+    <div class="container">
+        <div id="sparkle-container"></div>
+    </div>
+
+    <div class="center-content">
+        <img src="ask.gif" alt="GIF Animation" class="center-gif">
+        <h1>Will you be the solution to all my errors ❔</h1>
+        <div class="button-group">
+           <a href="yes.html"><button id="yes-btn">Yes</button></a>
+            <a href="no.html"><button id="no-btn">No</button></a>
+        </div>
+    </div>
+    
+
+    <script>
+        const sparkleContainer = document.getElementById('sparkle-container');
+
+// Function to generate a sparkle
+function createSparkle() {
+    const sparkle = document.createElement('div');
+    sparkle.classList.add('sparkle');
+
+    // Set random position and color
+    const randomX = Math.random() * window.innerWidth;
+    const randomColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
+
+    sparkle.style.left = `${randomX}px`;
+    sparkle.style.background = `radial-gradient(circle, ${randomColor}, transparent)`;
+    sparkle.style.boxShadow = `0 0 15px 5px ${randomColor}, 0 0 30px 10px ${randomColor}`;
+
+    // Add sparkle to the container
+    sparkleContainer.appendChild(sparkle);
+
+    // Remove sparkle after animation ends
+    setTimeout(() => {
+        sparkle.remove();
+    }, 3000);
+}
+
+// Function to start the shower
+function startShower(duration) {
+    const interval = setInterval(createSparkle, 50);
+
+    // Stop the shower after the given duration
+    setTimeout(() => {
+        clearInterval(interval);
+    }, duration * 1000);
+}
+
+// Start the sparkling shower for 10 seconds
+startShower(1000);
+
+        
+    </script>
+</body>
+</html>
